@@ -62,4 +62,11 @@ export default function Home() {
       </main>
     </div>
   );
+  return (
+    <main style={{ padding: "2rem" }}>
+      <a href="/api/auth/login">
+        <button>Login with Spotify</button>
+      </a>
+    </main>
+  );
 }
