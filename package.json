@@ -1,0 +1,13 @@
+{
+  "name": "findmyvibe",
+  "version": "1.0.0",
+  "description": "Local development server for findmyvibe",
+  "scripts": {
+    "start": "npx http-server frontend -p 8000 -o",
+    "dev": "npx http-server frontend -p 8000 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

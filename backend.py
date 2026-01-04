@@ -1,12 +1,21 @@
 import os
 from google import genai
+from pymongo import MongoClient
 from dotenv import load_dotenv
 
+#Load varaibles from ignored file
 load_dotenv(".env.local")
 
-# Initialize the client correctly
+# Initialize the Gemini Client 
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
+#Initialize Mongo Client
+mongo_client = MongoClient(os.getenv("MONGODB_URI"))
+
+#Getting the movie Database built into mongoDB
+
+db = mongo_client['sample_mflix']
+movies_col = db['movies']
 def get_chatbot_response(user_input):
     try:
         # Define the prompt
